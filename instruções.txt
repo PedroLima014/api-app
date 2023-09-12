@@ -1,0 +1,21 @@
+-- Criar o projeto:
+ ionic serve api-app tabs --type=angular
+
+-- Escolher NgModule
+-- Colocar "N" para não criar a conta do ionic
+
+-- Entrar na pasta do projeto:
+cd api-app
+-- Criar a pasta Models dentro da pasta src/app para adicionar as classes do BD
+-- Criar um arquivo <nome>.models.ts dentro da pasta para cada tabela
+Produto.models.ts
+Usuario.models.ts
+
+-- Adicionar o codigo da classe, declarando cada propriedade
+
+-- Criar um Serviço para trabalhar com os dados
+ionic g service services/<nome>
+
+-- Adicionar o HttpClientModule no app.module.ts dentro dos imports
+import { HttpClientModule } from '@angular/common/http';
+
