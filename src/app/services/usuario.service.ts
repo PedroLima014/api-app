@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Usuario } from '../Models/Usuario.models';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class UsuarioService {
 
 
   public getAll(){
-    return this.htpp.get(this.url);
+    return this.http.get(this.url);
   }
 
   public getOne(id: number){
