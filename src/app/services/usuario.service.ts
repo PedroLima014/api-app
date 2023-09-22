@@ -22,12 +22,13 @@ export class UsuarioService {
     );
   }
 
-  public getOne(id: number): Observable<Usuario[]>{
-    return this.http.get<Usuario>(`${this.url}\${id}`).pipe(
+  public getOne(id: number): Observable<Usuario[]> {
+    return this.http.get<Usuario>(`${this.url}/${id}`).pipe(
       map(retorno => retorno),
       catchError(erro => this.exibeErro(erro))
     );
   }
+  
 
   exibeErro(erro: any):Observable<any>
   {
