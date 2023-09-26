@@ -3,5 +3,5 @@ export class Produto {
   nome!: string;
   descricao!: string;
   validade!: string;
-  preco!: number;
+  valor!: number;
 }
