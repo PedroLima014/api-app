@@ -22,7 +22,7 @@ export class UsuarioService {
     );
   }
 
-  public getOne(id: number): Observable<Usuario[]> {
+  public getOne(id: number): Observable<Usuario> {
     return this.http.get<Usuario>(`${this.url}/${id}`).pipe(
       map(retorno => retorno),
       catchError(erro => this.exibeErro(erro))
@@ -39,6 +39,13 @@ export class UsuarioService {
 
   salvar(usuario: Usuario):Observable<Usuario>{
     return this.http.post<Usuario>(this.url, usuario).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibeErro(erro))
+    );
+  }
+
+  alterar(usuario: Usuario):Observable<Usuario>{
+    return this.http.put<Usuario>(`${this.url}/${usuario.id}`, usuario).pipe(
       map(retorno => retorno),
       catchError(erro => this.exibeErro(erro))
     );

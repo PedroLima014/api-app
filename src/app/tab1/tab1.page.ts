@@ -36,6 +36,10 @@ id = 0;
     });
   }
   ngOnInit(): void{
+    
+  }
+
+  ionViewWillEnter(){
     this.buscarUsuarios();
   }
 
